@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #FAF8F5;
+    --color-teal: #1B4D4E;
+    --color-terracotta: #D96B43;
+    --color-charcoal: #1E2424;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal-900 antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-terracotta-600/30 text-charcoal-900;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 lg:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-cream px-6 py-3 text-sm font-semibold text-teal-600 shadow-sm ring-1 ring-inset ring-teal-200 hover:bg-teal-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200;
+  }
+
+  .btn-terracotta {
+    @apply inline-flex items-center justify-center rounded-lg bg-terracotta-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-terracotta-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta-600 transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg border border-teal-300 bg-transparent px-6 py-3 text-sm font-semibold text-teal-600 hover:bg-teal-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200;
+  }
+
+  .card {
+    @apply rounded-2xl border border-teal-100 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .input-field {
+    @apply block w-full rounded-lg border border-teal-200 bg-white px-4 py-3 text-charcoal-900 placeholder:text-teal-400 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/20 transition-colors duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-charcoal-900 mb-1;
+  }
+
+  .heading-xl {
+    @apply font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal-900 tracking-tight text-balance;
+  }
+
+  .heading-lg {
+    @apply font-heading text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight;
+  }
+
+  .heading-md {
+    @apply font-heading text-2xl sm:text-3xl font-bold text-charcoal-900;
+  }
+
+  .text-muted {
+    @apply text-teal-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
